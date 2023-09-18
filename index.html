@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //array
+        const array1 = [1, 2, 3, 5, 6, 5, -3, -5]
+        const array2 = [1, 2, [3, 4], 5, { a: 7 }]
+
+        console.log(array1.map((e) => e * e))
+
+        console.log(new Set(array1))
+        console.log(array1.some(e => e < 0))
+        console.log(array1.filter(val => val < 0))
+
+        let sum = 0
+        for (let i = 0; i < array1.length; i++) {
+            0
+            sum = sum + array1[i]
+        }
+
+        console.log(sum)
+
+        console.log(array2.filter(Array.isArray))
+
+        //string
+        const str = 'test testtest testte test test test testtes'
+        const arr = str.split(' ')
+        console.log(arr.filter(e => e.length == 4).length)
+
+        console.log('--------------------')
+        const str2 = 'abcd12346ef5234'
+        const arr2 = str2.split('')
+
+        for (let i = 0; i < arr2.length; i++) {
+            if (!isNaN(parseInt(arr2[i]))) {
+                if (!isNaN(parseInt(arr2[i + 1]))) {
+                    if (!isNaN(parseInt(arr2[i + 2]))) {
+                        if (!isNaN(parseInt(arr2[i + 3]))) {
+                            if (!isNaN(parseInt(arr2[i + 4]))) {
+                                if (!isNaN(parseInt(arr2[i + 5]))) {
+                                    console.log(arr2.slice(i, i + 6).join(''))
+                                }
+                                console.log(false)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
